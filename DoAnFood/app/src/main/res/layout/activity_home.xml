@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/restaurant_vector_home"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/restaurant_vector_home"/>
+    
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_background"
+        android:orientation="vertical"
+        android:paddingLeft="27dp"
+        android:paddingRight="27dp"
+        android:paddingBottom="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xin chào, "
+            android:textColor="@color/yellow"
+            android:layout_marginTop="43dp"
+            android:textSize="30dp"
+            android:fontFamily="@font/inter_bold"/>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:background="@drawable/baseline_place_24"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/location_icon"
+                android:layout_centerVertical="true"/>
+
+            <Button
+                android:id="@+id/btn_location"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/location_icon"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_medium"
+                android:paddingLeft="8dp"
+                android:text="TP.HCM"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_marginLeft="75dp"
+                android:background="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_toRightOf="@+id/location_icon"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:background="@drawable/search_shape"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <EditText
+                android:id="@+id/txt_search"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:fontFamily="@font/inter_medium"
+                android:hint="Tìm kiếm món ăn, quán ăn, ..."
+                android:paddingLeft="24dp"
+                android:textSize="14dp" />
+
+            <ImageButton
+                android:padding="8dp"
+                android:background="@drawable/search_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_search"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/header"
+        android:paddingLeft="27dp"
+        android:paddingRight="27dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_alignParentStart="true">
+                    <ImageButton
+                        android:id="@+id/category_all"
+                        android:padding="8dp"
+                        android:src="@drawable/all_vector"
+                        android:background="@drawable/category_shape"
+                        android:layout_width="96dp"
+                        android:layout_height="116dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TẤT CẢ"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:textColor="@color/black_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true">
+                    <ImageButton
+                        android:id="@+id/category_restaurant"
+                        android:background="@drawable/category_shape"
+                        android:src="@drawable/restaurant_vector"
+                        android:layout_width="96dp"
+                        android:layout_height="116dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QUÁN ĂN"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:textColor="@color/black_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true">
+                    <ImageButton
+                        android:id="@+id/category_cafeshop"
+                        android:background="@drawable/category_shape"
+                        android:src="@drawable/cafeshop_vector"
+                        android:layout_width="96dp"
+                        android:layout_height="116dp"
+                        android:scaleType="centerInside"/>
+
+                    <TextView
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QUÁN CAFE"
+                        android:fontFamily="@font/inter_extrabold"
+                        android:textColor="@color/black_background"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tất cả quán ăn"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+            <ListView
+                android:id="@+id/lsvHome"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/menu_shape"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/menu_item_shape"
+                android:src="@drawable/baseline_home_24"
+                android:padding="4dp"/>
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRANG CHỦ"
+                android:textSize="12dp"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_discover"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/discover_vector"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:id="@+id/btn_account"
+            android:padding="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/account_vector"
+            android:scaleType="centerInside"/>
+    </RelativeLayout>
+</RelativeLayout>
